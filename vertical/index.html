@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0B1C2D"><meta name="apple-mobile-web-app-capable" content="yes">
 <title>Stap · Apresentação</title>
 <meta property="og:title" content="Stap · Design é a nossa essência"><meta property="og:description" content="Apresentação comercial da Stap.">
 <style>
@@ -240,7 +240,7 @@ i.sf{font-style:italic}
 <div id="hit"><b></b><b></b></div><div id="ui"><b></b></div><div id="hint">Toque para avançar →</div>
 <script>
 const st=document.getElementById('stage'),S=[...document.querySelectorAll('.sl')],bar=document.querySelector('#ui b'),hint=document.getElementById('hint');
-function fit(){const k=Math.min(innerWidth/1080,innerHeight/1920);st.style.transform=`scale(${k})`}addEventListener('resize',fit);fit();
+function fit(){const W=innerWidth,H=innerHeight;let k,h=1920;if(H/W>1920/1080){k=W/1080;h=Math.round(H/k)}else k=H/1920;st.style.height=h+'px';st.style.transform=`scale(${k})`}addEventListener('orientationchange',()=>setTimeout(fit,300));addEventListener('resize',fit);fit();
 let i=0,sync;function go(n){n=Math.max(0,Math.min(S.length-1,n));i=n;if(i>0)hint.style.opacity=0;S.forEach((s,j)=>{s.classList.toggle('on',j===i);s.querySelectorAll('video').forEach(v=>{if(j===i){v.currentTime=0;v.play().catch(()=>{})}else v.pause()})});
 [S[i+1]].forEach(s=>s&&s.querySelectorAll('img').forEach(m=>m.loading='eager'));bar.style.width=((i+1)/S.length*100)+'%';sync&&sync();if(S[i].querySelector('.tqs'))tq(0);else clearTimeout(tqt)}
 const mb=document.getElementById('mb'),cn=document.getElementById('cnav');
