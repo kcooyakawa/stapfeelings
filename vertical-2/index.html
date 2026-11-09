@@ -130,7 +130,7 @@ i.sf{font-style:italic}
 .fzp{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--e)}.fzc.open .fzp{grid-template-rows:1fr}.fzpi{overflow:hidden;pointer-events:auto}
 .fzim{height:380px;overflow:hidden;clip-path:inset(0 0 100% 0);transition:clip-path .9s .1s var(--e)}.fzc.open .fzim{clip-path:inset(0)}.fzim img{width:100%;height:100%;object-fit:cover}
 .fzc .exl{margin-bottom:26px}
-.sl{transition:opacity .5s ease,visibility 0s .5s,background .6s}.sl.fzopen{background:linear-gradient(170deg,#E3EEF8 0%,#C3DAF0 55%,#9CC3E8 100%)!important}
+.sl{transition:opacity .5s ease,visibility 0s .5s,background .6s}.sl[data-id="fortalezas"]::before{content:"";position:absolute;inset:0;background:linear-gradient(170deg,#E3EEF8 0%,#C3DAF0 55%,#9CC3E8 100%);opacity:0;transition:opacity .9s var(--e)}.sl.fzopen::before{opacity:1}
 .flow .nd{position:absolute;width:620px;height:150px;border-radius:26px;background:#fff;box-shadow:0 10px 40px rgba(11,28,45,.08),inset 0 0 0 2px rgba(31,79,168,.12);display:flex;align-items:center;gap:28px;padding:0 34px;text-transform:none}
 .flow .nk{flex:none;width:72px;height:72px;border-radius:18px;background:var(--n);color:#fff;font:400 26px G,sans-serif;letter-spacing:.06em;display:flex;align-items:center;justify-content:center}
 .flow b{display:block;font:400 46px/1 G,sans-serif;letter-spacing:-.03em;text-transform:uppercase;color:var(--n)}.flow i.sf{display:block;font-size:32px;color:var(--m);margin-top:8px}
